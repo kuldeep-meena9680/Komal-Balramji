@@ -158,20 +158,28 @@
 
     /* ========== LOCK SCREEN ========== */
     #lockScreen {
-      position: fixed;
-      inset: 0;
-      z-index: 100000;
-      background:
-        radial-gradient(circle at 50% 35%, rgba(255, 28, 105, .22), transparent 35%),
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh; /* ✅ dynamic viewport height (mobile pe address bar count karta hai) */
+  z-index: 100000;
+  background: radial-gradient(circle at 50% 35%, rgba(255, 28, 105, .22), transparent 35%),
         radial-gradient(circle at 10% 90%, rgba(120, 20, 255, .15), transparent 35%),
         #060208;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      transition: opacity 1.2s ease;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 1.2s ease;
+  overflow: hidden; /* ✅ andar scroll nahi hone dega */
+  overscroll-behavior: contain; /* ✅ background scroll block */
+  touch-action: none; /* ✅ touch scroll block lock screen pe */
+}
 
     .lock-content { max-width: 650px; width: 100%; }
 
