@@ -27,16 +27,15 @@
       overflow-x: hidden;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
-      cursor: none; /* hide default cursor (desktop only) */
+      cursor: none;
     }
 
-    /* Touch devices: restore default cursor */
     @media (hover: none) and (pointer: coarse) {
       body { cursor: auto; }
       .heart-cursor { display: none !important; }
     }
 
-    /* ========== HEART CURSOR (desktop only) ========== */
+    /* ========== HEART CURSOR ========== */
     .heart-cursor {
       position: fixed;
       top: 0;
@@ -65,7 +64,6 @@
       50% { transform: scale(1.15); }
     }
 
-    /* trailing small hearts */
     .heart-trail {
       position: fixed;
       top: 0;
@@ -118,17 +116,8 @@
       pointer-events: none;
     }
 
-    .glow1 {
-      background: #ff1767;
-      top: 5%;
-      left: -130px;
-    }
-
-    .glow2 {
-      background: #751aff;
-      right: -150px;
-      bottom: -100px;
-    }
+    .glow1 { background: #ff1767; top: 5%; left: -130px; }
+    .glow2 { background: #751aff; right: -150px; bottom: -100px; }
 
     /* ========== TYPOGRAPHY ========== */
     .section-title {
@@ -184,10 +173,7 @@
       transition: opacity 1.2s ease;
     }
 
-    .lock-content {
-      max-width: 650px;
-      width: 100%;
-    }
+    .lock-content { max-width: 650px; width: 100%; }
 
     .lock-heart {
       font-size: clamp(50px, 15vw, 75px);
@@ -285,7 +271,6 @@
     }
 
     .music-btn:active { transform: scale(0.9); }
-
     .music-btn.playing { animation: musicPulse 1.2s infinite; }
 
     @keyframes musicPulse {
@@ -516,7 +501,7 @@
       margin-top: 30px;
     }
 
-    /* ========== LOVE CARDS (3D) ========== */
+    /* ========== LOVE CARDS ========== */
     .cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -542,10 +527,7 @@
       box-shadow: 0 25px 55px rgba(255, 20, 100, .13);
     }
 
-    .love-icon {
-      font-size: clamp(30px, 7vw, 42px);
-      margin-bottom: 14px;
-    }
+    .love-icon { font-size: clamp(30px, 7vw, 42px); margin-bottom: 14px; }
 
     .love-card h3 {
       color: #ffabc0;
@@ -590,10 +572,7 @@
       50% { transform: translateY(-15px) rotateY(180deg); }
     }
 
-    .engagement-text {
-      max-width: 800px;
-      margin: auto;
-    }
+    .engagement-text { max-width: 800px; margin: auto; }
 
     .engagement-text p {
       color: #d7c2cb;
@@ -613,10 +592,8 @@
       letter-spacing: 1.5px;
     }
 
-    /* ========== MEMORY GALLERY (6 BOXES — 3 COLUMNS DESKTOP) ========== */
-    .memory-section {
-      background: #09040b;
-    }
+    /* ========== MEMORY GALLERY ========== */
+    .memory-section { background: #09040b; }
 
     .gallery {
       display: grid;
@@ -642,7 +619,6 @@
       isolation: isolate;
     }
 
-    /* Animated love bubble background (behind image) */
     .memory::before {
       content: "";
       position: absolute;
@@ -659,7 +635,6 @@
       opacity: 0.9;
     }
 
-    /* Floating hearts (behind image) */
     .memory::after {
       content: "❤️ 💕 💖 💗 ❤️";
       position: absolute;
@@ -729,10 +704,7 @@
       text-align: center;
     }
 
-    .quote {
-      max-width: 900px;
-      margin: auto;
-    }
+    .quote { max-width: 900px; margin: auto; }
 
     .quote-mark {
       font-size: clamp(60px, 15vw, 100px);
@@ -747,10 +719,7 @@
       font-weight: 500;
     }
 
-    .quote p {
-      color: #ff9ab4;
-      font-size: clamp(13px, 3.2vw, 16px);
-    }
+    .quote p { color: #ff9ab4; font-size: clamp(13px, 3.2vw, 16px); }
 
     /* ========== GIFT ========== */
     .gift-section { text-align: center; }
@@ -807,9 +776,7 @@
       background: #ffd36e;
     }
 
-    .gift.opened .gift-lid {
-      transform: translateY(-65px) rotate(-5deg);
-    }
+    .gift.opened .gift-lid { transform: translateY(-65px) rotate(-5deg); }
 
     @keyframes giftFloat {
       50% { transform: translateY(-10px); }
@@ -826,10 +793,7 @@
       backdrop-filter: blur(15px);
     }
 
-    .surprise.show {
-      display: block;
-      animation: pop .8s ease;
-    }
+    .surprise.show { display: block; animation: pop .8s ease; }
 
     @keyframes pop {
       from { opacity: 0; transform: scale(.7); }
@@ -874,10 +838,7 @@
       font-size: clamp(13px, 3.4vw, 16px);
     }
 
-    .final-love {
-      color: #ff99b4 !important;
-      font-size: clamp(15px, 4vw, 21px);
-    }
+    .final-love { color: #ff99b4 !important; font-size: clamp(15px, 4vw, 21px); }
 
     /* ========== FOOTER ========== */
     footer {
@@ -890,8 +851,7 @@
 
     footer span { color: #ff5e8b; }
 
-    /* ========== RESPONSIVE BREAKPOINTS ========== */
-
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 900px) {
       .cards { grid-template-columns: repeat(2, 1fr); }
       .gallery { grid-template-columns: repeat(2, 1fr); }
@@ -903,16 +863,8 @@
         min-height: auto;
       }
       .hero, .final { min-height: 100vh; }
-      .cards {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-        margin: 0 auto;
-      }
-      .gallery {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto;
-      }
+      .cards { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+      .gallery { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
       .hero h1 { letter-spacing: -1.5px; }
       .section-title h2 { font-size: clamp(26px, 8vw, 40px); }
       .quote h2 { font-size: clamp(20px, 6.5vw, 32px); }
@@ -944,7 +896,13 @@
 
 <body>
 
-  <!-- ========== HEART CURSOR (desktop only) ========== -->
+  <!-- ========== BACKGROUND MUSIC (apna MP3 naam yahan daalo) ========== -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="tum_mere_ho.mp3.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- ========== HEART CURSOR ========== -->
   <div class="heart-cursor" id="heartCursor"></div>
 
   <!-- ========== LOCK SCREEN ========== -->
@@ -1017,7 +975,7 @@
     </div>
   </section>
 
-  <!-- ========== WHAT YOU MEAN (3D CARDS) ========== -->
+  <!-- ========== WHAT YOU MEAN ========== -->
   <section>
     <div class="container">
       <div class="section-title">
@@ -1057,47 +1015,41 @@
     </div>
   </section>
 
-  <!-- ========== MEMORY GALLERY (6 IMAGE BOXES) ========== -->
+  <!-- ========== MEMORY GALLERY ========== -->
   <section class="memory-section">
     <div class="container">
       <div class="section-title">
         <small>Our Memories</small>
         <h2>Beautiful Moments 📸</h2>
-        <p>Ye jagah aap dono ki favourite memories ke liye hai.</p>
+      
       </div>
       <div class="gallery">
 
-        <!-- Box 1 -->
         <div class="memory">
           <img src="image1.png" alt="Special Moment">
           <div class="memory-caption">Our Special Moment • 27 Feb 2018</div>
         </div>
 
-        <!-- Box 2 -->
         <div class="memory">
           <img src="image2.png" alt="Engagement">
           <div class="memory-caption">Our Engagement • 19 April 2026</div>
         </div>
 
-        <!-- Box 3 -->
         <div class="memory">
           <img src="image3.png" alt="Promise">
           <div class="memory-caption">A Promise For Forever</div>
         </div>
 
-        <!-- Box 4 -->
         <div class="memory">
           <img src="image4.png" alt="Memory">
           <div class="memory-caption">Our First Meet • Always Special</div>
         </div>
 
-        <!-- Box 5 -->
         <div class="memory">
           <img src="image5.png" alt="Dream">
           <div class="memory-caption">Dreaming Together</div>
         </div>
 
-        <!-- Box 6 -->
         <div class="memory">
           <img src="image6.png" alt="Forever">
           <div class="memory-caption">Forever & Always</div>
@@ -1298,7 +1250,7 @@
       }, { passive: true });
     });
 
-    /* ========== HEART CURSOR (desktop only) ========== */
+    /* ========== HEART CURSOR ========== */
     (function heartCursor() {
       const isTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
       if (isTouch) return;
@@ -1314,7 +1266,6 @@
         mouseX = e.clientX;
         mouseY = e.clientY;
 
-        // spawn trailing heart every ~60ms
         const now = performance.now();
         if (now - lastTrailTime > 60) {
           lastTrailTime = now;
@@ -1328,7 +1279,6 @@
         }
       });
 
-      // smooth follow (lerp)
       function animate() {
         cursorX += (mouseX - cursorX) * 0.22;
         cursorY += (mouseY - cursorY) * 0.22;
@@ -1337,7 +1287,6 @@
       }
       animate();
 
-      // enlarge on hover of clickable elements
       document.querySelectorAll("button, .memory, .love-card, .gift").forEach(el => {
         el.addEventListener("mouseenter", () => {
           cursor.style.transform += " scale(1.6)";
@@ -1349,55 +1298,26 @@
       });
     })();
 
-    /* ========== MUSIC ENGINE ========== */
-    let audioContext = null;
+    /* ========== MUSIC ENGINE (MP3 VERSION) ========== */
+    const bgMusic = document.getElementById("bgMusic");
     let musicPlaying = false;
-    let musicTimer = null;
 
     function startMusic() {
       if (musicPlaying) return;
-      try {
-        audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        const master = audioContext.createGain();
-        master.gain.value = 0.05;
-        master.connect(audioContext.destination);
-
-        const notes = [
-          261.63, 293.66, 329.63, 349.23, 392.00, 349.23, 329.63, 293.66,
-          261.63, 293.66, 329.63, 392.00, 440.00, 392.00, 349.23, 329.63
-        ];
-
-        let index = 0;
-
-        function playNote() {
-          if (!musicPlaying) return;
-          const osc = audioContext.createOscillator();
-          const gain = audioContext.createGain();
-          osc.type = "sine";
-          osc.frequency.value = notes[index % notes.length];
-          gain.gain.setValueAtTime(0, audioContext.currentTime);
-          gain.gain.linearRampToValueAtTime(0.4, audioContext.currentTime + 0.6);
-          gain.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 3.0);
-          osc.connect(gain);
-          gain.connect(master);
-          osc.start();
-          osc.stop(audioContext.currentTime + 3.0);
-          index++;
-          musicTimer = setTimeout(playNote, 1700);
-        }
-
+      bgMusic.volume = 0.5;
+      bgMusic.play().then(() => {
         musicPlaying = true;
         document.getElementById("musicBtn").textContent = "🎵";
         document.getElementById("musicBtn").classList.add("playing");
-        playNote();
-      } catch (err) {
-        console.log("Audio not supported");
-      }
+      }).catch(err => {
+        console.log("Music play failed:", err);
+        // Agar browser block kare, toh user ko button click karna padega
+      });
     }
 
     function stopMusic() {
+      bgMusic.pause();
       musicPlaying = false;
-      clearTimeout(musicTimer);
       document.getElementById("musicBtn").textContent = "🔇";
       document.getElementById("musicBtn").classList.remove("playing");
     }
